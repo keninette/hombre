@@ -1,7 +1,27 @@
 {% extends "base.html.twig" %}
 
 {% block body %}
-<div class="bg-green-300">
-    hello world!
-</div>
+    <div id="animatedBody" class="w-full h-full bg-transparent flex flex-col">
+        <section class="flex flex-col h-4/5 w-1/2 m-10 justify-end text-palette-grey">
+            <h1 class="uppercase text-6xl tracking-widest-2xl font-thin mt-4">Julien Hauthier</h1>
+            <p class="tracking-widest font-light text-justify mt-4">
+                Telecom, inspection de bâtiments, éoliennes, chantiers... Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+            <div class="flex justify-between tracking-widest font-light text-justify mt-4">
+                <div><span class="fa fa-map-marked-alt mr-2"></span>Auvergne, Rhônes Alpes</div>
+                <a class="text-palette-orange-light cursor-pointer hover:underline"><span class="fa fa-mobile-alt mr-2"></span>Contactez-moi</a>
+                <a class="cursor-pointer hover:underline"><span class="fa fa-fan mr-2"></span>Le matériel</a>
+            </div>
+        </section>
+        {#<div id="contact" class="flex flex-col justify-center items-center w-10 h-36 bg-palette-orange-light fixed right-0 top-0 rounded-l-xl text-white ">
+        <span class="fa fa-mobile-alt"></span>
+        <span class="text-vertical text-upright uppercase">Contact</span>
+    </div>#}
+        <div id="contact" class="flex justify-center items-center w-10 h-12 bg-palette-orange-light fixed right-0 top-1/2 rounded-l-xl text-white ">
+            <span class="fa fa-mobile-alt fa-2x"></span>
+        </div>
+        <div id="copyright" class="flex justify-center text-palette-grey-light text-xs">
+            <p><span class="far fa-copyright mr-1"></span>Photo par <a class="underline cursor-pointer" target="_blank" href="https://unsplash.com/@asoggetti">Alessio Soggetti</a> disponible sur <a class="underline cursor-pointer" target="_blank" href="https://unsplash.com/photos/rSFxBGpnluw?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink">Unsplash</a></p>
+        </div>
+    </div>
 {% endblock %}
