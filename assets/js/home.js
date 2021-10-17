@@ -34,4 +34,28 @@ function animateBody() {
   });
 }
 
-export { animateBody };
+function toggleContact() {
+  const $target = document.getElementById('contact');
+  const currentState = $target.getAttribute('data-state');
+
+  if (currentState === 'opened') {
+    $target.setAttribute('data-state', 'closed');
+  } else {
+    $target.setAttribute('data-state', 'opened');
+  }
+}
+
+function mountContact() {
+  toggleContact();
+
+  document.querySelectorAll('.show-contact').forEach(($element) => {
+    const allowTouch = window.Touch || false;
+    $element.addEventListener(allowTouch ? 'tap' : 'click', (e) => toggleContact());
+  });
+}
+
+function mountHome() {
+  mountContact();
+}
+
+export { mountHome };

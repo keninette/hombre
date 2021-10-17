@@ -14,10 +14,14 @@ body {
     overflow: hidden;
 }
 
-.text-vertical {
-    writing-mode: vertical-lr;
+#contact[data-state="closed"] {
+    left: calc(100% - theme('width.10'));
 }
 
-.text-upright {
-    text-orientation: upright;
+#contact[data-state="opened"] {
+    left: 20%;
+}
+
+.orange-button {
+    @apply justify-center bg-palette-orange-light border-none text-black rounded-full;
 }

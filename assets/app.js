@@ -18,6 +18,7 @@ const $ = require('jquery');
 // create global $ and jQuery variables
 global.$ = global.jQuery = $;
 
-import { animateBody } from "./js/animate";
+import { mountHome } from "./js/home";
 
 //animateBody();
+mountHome();
